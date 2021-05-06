@@ -56,17 +56,32 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Love Hate Thing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-AV-kqc">
-                                                                <rect key="frame" x="0.0" y="50" width="398" height="100"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="g2p-C2-9oc"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="33"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-FR-ZyR">
+                                                                <rect key="frame" x="0.0" y="50" width="398" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Love Hate Thing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-AV-kqc">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="348" height="50"/>
+                                                                        <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="33"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsA-h7-kxR">
+                                                                        <rect key="frame" x="348" y="0.0" width="50" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="Grl-If-E49"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="yTp-KZ-IpB"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                                        <state key="normal" image="square.and.arrow.down.fill" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="readerPressed:" destination="dlR-Iy-Diy" eventType="touchUpInside" id="wtF-18-JJ9"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whitney D. Grandison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WFk-0I-5KO">
-                                                                <rect key="frame" x="0.0" y="160" width="398" height="130.5"/>
+                                                                <rect key="frame" x="0.0" y="110" width="398" height="180.5"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -74,11 +89,13 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="WFk-0I-5KO" secondAttribute="trailing" id="3PV-lX-3pc"/>
+                                                            <constraint firstItem="nvj-FR-ZyR" firstAttribute="top" secondItem="Mhg-1A-bAe" secondAttribute="bottom" constant="10" id="7ag-E8-KZF"/>
                                                             <constraint firstAttribute="trailing" secondItem="Mhg-1A-bAe" secondAttribute="trailing" constant="8" id="GWP-gM-PVq"/>
+                                                            <constraint firstItem="nvj-FR-ZyR" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="MKk-S9-5zP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nvj-FR-ZyR" secondAttribute="trailing" id="SJY-Xf-Jj8"/>
                                                             <constraint firstItem="Mhg-1A-bAe" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="Wj3-1x-azX"/>
                                                             <constraint firstItem="WFk-0I-5KO" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="bNb-xV-Qst"/>
-                                                            <constraint firstItem="RWJ-AV-kqc" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="hzQ-Lk-hSL"/>
-                                                            <constraint firstAttribute="trailing" secondItem="RWJ-AV-kqc" secondAttribute="trailing" id="n3i-T9-xtv"/>
+                                                            <constraint firstItem="WFk-0I-5KO" firstAttribute="top" secondItem="nvj-FR-ZyR" secondAttribute="bottom" constant="10" id="vRp-7W-s0E"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-yr-8wh">
@@ -499,7 +516,7 @@
                     <tabBarItem key="tabBarItem" title="الرئيسية" image="house.fill" catalog="system" id="vcf-ha-MFa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zzq-e7-o8J">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textShadowColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -608,7 +625,7 @@
                     <tabBarItem key="tabBarItem" title="اضافة كتاب" image="plus" catalog="system" id="c7F-Qe-bKM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ANy-hA-jyk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1150,7 +1167,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BEU-bd-9ER"/>
+        <segue reference="FJ9-MC-OG8"/>
         <segue reference="PYX-wl-6t2"/>
         <segue reference="IQ5-uD-tIx"/>
     </inferredMetricsTieBreakers>
@@ -1160,8 +1177,12 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="placeholder" width="500" height="375"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

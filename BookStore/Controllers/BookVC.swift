@@ -116,4 +116,17 @@ class BookVC : UIViewController {
         })
         present(alert, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func readerPressed(_ sender: Any) {
+        
+        let theUrl =  "https://freeditorial.com/en/books/the-little-prince/downloadbookepub/pdf"
+        guard let path = Bundle.main.url(forResource: theUrl, withExtension: "pdf") else {
+            print("failed to unwrap fileURL")
+            return
+        }
+        
+        let pdfViewController = PDFViewController(pdfUrl: path)
+        present(pdfViewController, animated: true, completion: nil)
+    }
 }

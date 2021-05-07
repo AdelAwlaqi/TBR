@@ -1200,7 +1200,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EZU-Vc-YTS"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.30017483230000003" green="0.66262769700000002" blue="0.72348004580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AUo-rV-LN3" firstAttribute="centerX" secondItem="YhV-8K-VTl" secondAttribute="centerX" id="LTw-3N-AoS"/>
                             <constraint firstItem="AUo-rV-LN3" firstAttribute="centerY" secondItem="YhV-8K-VTl" secondAttribute="centerY" id="ex7-QP-3ed"/>

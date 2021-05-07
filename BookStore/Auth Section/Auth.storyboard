@@ -39,7 +39,7 @@
                                             <constraint firstAttribute="height" constant="40" id="X36-3F-zlj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-JP-gNM">
                                         <rect key="frame" x="0.0" y="138.33333333333334" width="335" height="29"/>

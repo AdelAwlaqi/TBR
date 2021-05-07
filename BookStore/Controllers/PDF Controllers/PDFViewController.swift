@@ -82,7 +82,7 @@ class PDFViewController: UIViewController {
         dismissButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 30)
         dismissButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
         dismissButton.setTitleColor(.white, for: .normal)
-        dismissButton.backgroundColor = .black
+        dismissButton.backgroundColor = #colorLiteral(red: 0.3001748323, green: 0.662627697, blue: 0.7234800458, alpha: 1)
         dismissButton.alpha = 0.8
         view.addSubview(dismissButton)
         dismissButton.addTarget(self, action: #selector(back), for: .touchUpInside)
@@ -108,7 +108,7 @@ class PDFViewController: UIViewController {
         outlineButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 30)
         outlineButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
         outlineButton.setTitleColor(.white, for: .normal)
-        outlineButton.backgroundColor = .black
+        outlineButton.backgroundColor = #colorLiteral(red: 0.3001748323, green: 0.662627697, blue: 0.7234800458, alpha: 1)
         outlineButton.alpha = 0.8
         view.addSubview(outlineButton)
         outlineButton.addTarget(self, action: #selector(toggleOutline(sender:)), for: .touchUpInside)

@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreData
-import RealmSwift
+//import RealmSwift
 import Firebase
+import FirebaseCore
 
 
 @UIApplicationMain
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+        //print(Realm.Configuration.defaultConfiguration.fileURL as Any)
   
 //        let data = CartObject()
 //        let book = BookObject()
@@ -33,15 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        
         
-        do {
-           let _ = try Realm()
+//        do {
+//           let _ = try Realm()
 //            data.addItem(book: book)
 //            try realm.write {
 //                realm.add(data)
 //            }
-        } catch {
-            print("Error initialising new realm, \(error)")
-        }
+//        } catch {
+//            print("Error initialising new realm, \(error)")
+//        }
         
         return true
     }

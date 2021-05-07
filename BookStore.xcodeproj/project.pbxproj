@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		12D75B3CA21895F8F9C0B516 /* Pods_BookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */; };
+		624B73C8264481C3005B1D6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624B73C7264481C3005B1D6B /* Extensions.swift */; };
+		624B73CC2644F7FC005B1D6B /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624B73CB2644F7FC005B1D6B /* AuthVC.swift */; };
+		624B73D12644F8AB005B1D6B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624B73D02644F8AB005B1D6B /* LoginVC.swift */; };
+		624B73D42644F8F8005B1D6B /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624B73D32644F8F8005B1D6B /* RegisterVC.swift */; };
+		624B73D82644FA86005B1D6B /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624B73D62644FA85005B1D6B /* ForgotPasswordVC.swift */; };
+		624B73D92644FA86005B1D6B /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 624B73D72644FA86005B1D6B /* ForgotPasswordVC.xib */; };
+		624B73DC2644FAA1005B1D6B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624B73DB2644FAA1005B1D6B /* Auth.storyboard */; };
 		624EDCC72643946F00696A7B /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624EDCC62643946F00696A7B /* UserObject.swift */; };
 		624EDCCC2643A12B00696A7B /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624EDCCA2643A12B00696A7B /* PDFViewController.swift */; };
 		624EDCCD2643A12B00696A7B /* OutlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624EDCCB2643A12B00696A7B /* OutlineTableViewController.swift */; };
@@ -37,6 +44,13 @@
 
 /* Begin PBXFileReference section */
 		245E03C9F3481471A1E4A92B /* Pods-BookStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore.debug.xcconfig"; path = "Target Support Files/Pods-BookStore/Pods-BookStore.debug.xcconfig"; sourceTree = "<group>"; };
+		624B73C7264481C3005B1D6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		624B73CB2644F7FC005B1D6B /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		624B73D02644F8AB005B1D6B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		624B73D32644F8F8005B1D6B /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		624B73D62644FA85005B1D6B /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		624B73D72644FA86005B1D6B /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		624B73DB2644FAA1005B1D6B /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		624EDCC62643946F00696A7B /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		624EDCCA2643A12B00696A7B /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		624EDCCB2643A12B00696A7B /* OutlineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineTableViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +102,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		624B73C6264481B5005B1D6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD8478B025E5F22C0085B3BA /* BookObject.swift */,
+				624EDCC62643946F00696A7B /* UserObject.swift */,
+				624B73C7264481C3005B1D6B /* Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		624B73CF2644F895005B1D6B /* Auth Section */ = {
+			isa = PBXGroup;
+			children = (
+				624B73DB2644FAA1005B1D6B /* Auth.storyboard */,
+				624B73D62644FA85005B1D6B /* ForgotPasswordVC.swift */,
+				624B73D72644FA86005B1D6B /* ForgotPasswordVC.xib */,
+				624B73D02644F8AB005B1D6B /* LoginVC.swift */,
+				624B73D32644F8F8005B1D6B /* RegisterVC.swift */,
+			);
+			path = "Auth Section";
+			sourceTree = "<group>";
+		};
 		624EDCC92643A10B00696A7B /* PDF Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +166,10 @@
 				DD84789125E587720085B3BA /* AppDelegate.swift */,
 				DD84789325E587720085B3BA /* SceneDelegate.swift */,
 				DD84789725E587720085B3BA /* Main.storyboard */,
+				624B73CF2644F895005B1D6B /* Auth Section */,
 				DD986B8925E85EDA0096E44E /* Controllers */,
 				DD986B8825E85EC50096E44E /* Xibs */,
-				DD8478B025E5F22C0085B3BA /* BookObject.swift */,
-				624EDCC62643946F00696A7B /* UserObject.swift */,
+				624B73C6264481B5005B1D6B /* Model */,
 				DD84789D25E587750085B3BA /* Assets.xcassets */,
 				DD84789F25E587750085B3BA /* LaunchScreen.storyboard */,
 				DD8478A225E587750085B3BA /* Info.plist */,
@@ -161,6 +197,7 @@
 			children = (
 				624EDCC92643A10B00696A7B /* PDF Controllers */,
 				DDFA3BC425E6B1BC0039AF84 /* SearchVC.swift */,
+				624B73CB2644F7FC005B1D6B /* AuthVC.swift */,
 				DD9E229E25EBD9FA00A78E63 /* InvoiceVC.swift */,
 				DD986B8525E85EB30096E44E /* AddEditVC.swift */,
 				DD787CAC25EBE7DF00C3E85E /* SettingsVC.swift */,
@@ -233,9 +270,11 @@
 			files = (
 				DD8478AB25E5EE440085B3BA /* OffersCell.xib in Resources */,
 				DD8478A125E587750085B3BA /* LaunchScreen.storyboard in Resources */,
+				624B73D92644FA86005B1D6B /* ForgotPasswordVC.xib in Resources */,
 				DD84789E25E587750085B3BA /* Assets.xcassets in Resources */,
 				DD84789925E587720085B3BA /* Main.storyboard in Resources */,
 				DDA491BE25E9C3C70051BD27 /* MovieCell.xib in Resources */,
+				624B73DC2644FAA1005B1D6B /* Auth.storyboard in Resources */,
 				DD9E229B25EBD75200A78E63 /* InvoiceCell.xib in Resources */,
 				629E261B2641A4C20094C88B /* GoogleService-Info.plist in Resources */,
 			);
@@ -292,16 +331,21 @@
 			files = (
 				DD9E229A25EBD75200A78E63 /* InvoiceCell.swift in Sources */,
 				624EDCC72643946F00696A7B /* UserObject.swift in Sources */,
+				624B73D12644F8AB005B1D6B /* LoginVC.swift in Sources */,
 				DD8478AE25E5EE530085B3BA /* OffersCell.swift in Sources */,
 				DDA491B425E9BF800051BD27 /* CartVC.swift in Sources */,
 				DDA491BD25E9C3C70051BD27 /* MovieCell.swift in Sources */,
+				624B73D82644FA86005B1D6B /* ForgotPasswordVC.swift in Sources */,
 				DD9E229F25EBD9FA00A78E63 /* InvoiceVC.swift in Sources */,
 				DD84789225E587720085B3BA /* AppDelegate.swift in Sources */,
+				624B73C8264481C3005B1D6B /* Extensions.swift in Sources */,
 				DD8478B125E5F22D0085B3BA /* BookObject.swift in Sources */,
 				DDA79F3425E9394000D6E3F4 /* BookVC.swift in Sources */,
+				624B73CC2644F7FC005B1D6B /* AuthVC.swift in Sources */,
 				624EDCCC2643A12B00696A7B /* PDFViewController.swift in Sources */,
 				DD74591D25E67E1500B039AB /* HomeVC.swift in Sources */,
 				DD84789C25E587720085B3BA /* BookStore.xcdatamodeld in Sources */,
+				624B73D42644F8F8005B1D6B /* RegisterVC.swift in Sources */,
 				DD84789425E587720085B3BA /* SceneDelegate.swift in Sources */,
 				DD986B8625E85EB30096E44E /* AddEditVC.swift in Sources */,
 				624EDCCD2643A12B00696A7B /* OutlineTableViewController.swift in Sources */,

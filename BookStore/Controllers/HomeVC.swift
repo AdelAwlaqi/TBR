@@ -46,7 +46,7 @@ class HomeVC : UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setProductsListner()
+        setBooksListner()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -56,7 +56,7 @@ class HomeVC : UIViewController {
         collectionView2.reloadData()
     }
     
-    func setProductsListner() {
+    func setBooksListner() {
         var ref: Query!
         
         ref = db.collection("books")

@@ -1,9 +1,8 @@
 //
 //  PDFViewController.swift
-//  test
+//  BookStore
 //
-//  Created by udn on 2018/11/8.
-//  Copyright © 2018 dengli. All rights reserved.
+//  Created by fatma on 24/09/1442 AH.
 //
 
 import UIKit

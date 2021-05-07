@@ -12,21 +12,22 @@ struct BookObject {
     var title: String
     var bookID: String
     var author: String
+    var bookLink: String
     var price: Double
     var quantity: Int
     var bookImg: String
     var timeStamp: Timestamp
-    var numCopy: Int
+    var numCopy: Int = 1
     var added: Bool
     
-    init(title: String, bookID: String, author: String, price: Double, quantity: Int, bookImg: String, timeStamp: Timestamp, numCopy: Int = 0, added: Bool) {
+    init(title: String, bookID: String, bookLink: String, author: String, price: Double, quantity: Int, bookImg: String, timeStamp: Timestamp, added: Bool) {
         self.title = title
         self.bookID = bookID
         self.author = author
+        self.bookLink = bookLink
         self.price = price
         self.quantity = quantity
         self.bookImg = bookImg
-        self.numCopy = numCopy
         self.added = added
         self.timeStamp = timeStamp
     }
@@ -35,6 +36,7 @@ struct BookObject {
         self.title = data["title"] as? String ?? ""
         self.bookID = data["bookID"] as? String ?? ""
         self.author = data["author"] as? String ?? ""
+        self.bookLink = data["bookLink"] as? String ?? ""
         self.price = data["price"] as? Double ?? 0.0
         self.quantity = data["quantity"] as? Int ?? 0
         self.bookImg = data["bookImg"] as? String ?? ""
@@ -48,6 +50,7 @@ struct BookObject {
             "title" : book.title,
             "bookID" : book.bookID,
             "author" : book.author,
+            "bookLink" : book.bookLink,
             "price" : book.price,
             "quantity" : book.quantity,
             "bookImg" : book.bookImg,

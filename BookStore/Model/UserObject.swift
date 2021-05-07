@@ -13,7 +13,7 @@ struct User {
     var email: String
     var username: String
     
-    init(id: String, email: String, username: String, stripeId: String) {
+    init(id: String, email: String, username: String) {
         self.id = id
         self.email = email
         self.username = username

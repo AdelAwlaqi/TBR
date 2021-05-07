@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-import RealmSwift
+import PDFKit
 
 class BookVC : UIViewController {
     
@@ -23,7 +23,7 @@ class BookVC : UIViewController {
     
     var selectedBook: BookObject?
     var counter = 1
-    let realm = try! Realm()
+//    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +50,17 @@ class BookVC : UIViewController {
         if let destinationVC = segue.destination as? AddEditVC {
 //            destinationVC.selectedBook = selectedBook
         }
-        if let destinationVC2 = segue.destination as? CartVC {
-            do {
-                try realm.write {
-                    selectedBook?.numCopy = counter
-                    selectedBook?.added = true
-                }
-            } catch {
-                print("Error saving book \(error)")
-            }
-           
-        }
+//        if let destinationVC2 = segue.destination as? CartVC {
+//            do {
+//                try realm.write {
+//                    selectedBook?.numCopy = counter
+//                    selectedBook?.added = true
+//                }
+//            } catch {
+//                print("Error saving book \(error)")
+//            }
+//
+//        }
     }
     
     @IBAction func editPressed(_ sender: Any) {
@@ -98,14 +98,14 @@ class BookVC : UIViewController {
 
     @IBAction func addPressed(_ sender: Any) {
 
-        do {
-            try realm.write {
-                selectedBook?.numCopy = counter
-                selectedBook?.added = true
-            }
-        } catch {
-            print("Error saving book \(error)")
-        }
+//        do {
+//            try realm.write {
+//                selectedBook?.numCopy = counter
+//                selectedBook?.added = true
+//            }
+//        } catch {
+//            print("Error saving book \(error)")
+//        }
         
         let alert = UIAlertController(title: "تم الاضافة بنجاح", message: "هل تريد انهاء عملية الشراء", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "الانتقال للسلة", style: .default) { (action) in
@@ -120,13 +120,25 @@ class BookVC : UIViewController {
     
     @IBAction func readerPressed(_ sender: Any) {
         
-        let theUrl =  "https://freeditorial.com/en/books/the-little-prince/downloadbookepub/pdf"
-        guard let path = Bundle.main.url(forResource: theUrl, withExtension: "pdf") else {
+//        let theStr = selectedBook!.bookLink
+//        print("HERE IS YOUR BOOK DIRECT LINK TO BROWSE ADOOOOOOOOOOOOL //////////////////////////////////////// \(theStr)")
+//        guard let path = Bundle.main.url(forResource: "https://sambazmusic.files.wordpress.com/2017/08/give-and-take.pdf", withExtension: "pdf") else
+        
+        createPdfDocument(forFileName: (selectedBook!.bookLink))
+        let pdfViewController = PDFViewController(pdfUrl: URL(string: selectedBook!.bookLink)!)
+        present(pdfViewController, animated: true, completion: nil)
             print("failed to unwrap fileURL")
+            simpleAlert(title: "حدث خطأ", message: "على مايبدو ان رابط الكتاب معطوب")
             return
         }
         
-        let pdfViewController = PDFViewController(pdfUrl: path)
-        present(pdfViewController, animated: true, completion: nil)
+         func createPdfDocument(forFileName fileLink: String) -> PDFDocument? {
+            if let resourceUrl = URL(string: fileLink) {
+                return PDFDocument(url: resourceUrl)
+            }
+            
+            return nil
+        }
+       
     }
-}
+
